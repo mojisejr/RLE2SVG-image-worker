@@ -1,4 +1,5 @@
 import { letterToNumber } from "./letterToNumber.js";
+import { numberToLetter } from "./numberToLetter.js";
 import { getColor } from "./colorMapper.js";
 
 const frame = document.getElementById("frame");
@@ -15,196 +16,43 @@ rect {
   fill: #000000;
 }
 .c01 {
-  fill: #b1adac;
+  fill: #21ab09;
 }
 .c02 {
-  fill: #d7d7d7;
-}
-.c03 {
-  fill: #ffa6a6;
-}
-.c04 {
-  fill: #ffd4d5;
-}
-.c05 {
-  fill: #b9ad95;
-}
-.c06 {
-  fill: #e2d6be;
-}
-.c07 {
-  fill: #7f625a;
-}
-.c08 {
-  fill: #a58f82;
-}
-.c09 {
-  fill: #4b1e0b;
-}
-.c10 {
-  fill: #6d2c10;
-}
-.c11 {
-  fill: #d8d8d8;
-}
-.c12 {
-  fill: #f5f5f5;
-}
-.c13 {
-  fill: #433d4b;
-}
-.c14 {
-  fill: #8d949c;
-}
-.c15 {
-  fill: #05ff00;
-}
-.c16 {
-  fill: #01c700;
-}
-.c17 {
-  fill: #0b8f08;
-}
-.c18 {
-  fill: #421c13;
-}
-.c19 {
-  fill: #6b392a;
-}
-.c20 {
-  fill: #a35e40;
-}
-.c21 {
-  fill: #dcbd91;
-}
-.c22 {
-  fill: #777777;
-}
-.c23 {
-  fill: #848484;
-}
-.c24 {
-  fill: #ababab;
-}
-.c25 {
-  fill: #bababa;
-}
-.c26 {
-  fill: #c7c7c7;
-}
-.c27 {
-  fill: #eaeaea;
-}
-.c28 {
-  fill: #0c76aa;
-}
-.c29 {
-  fill: #0e97db;
-}
-.c30 {
-  fill: #10a4ec;
-}
-.c31 {
-  fill: #13b0ff;
-}
-.c32 {
-  fill: #2eb9fe;
-}
-.c33 {
-  fill: #54ccff;
-}
-.c34 {
-  fill: #50c0f2;
-}
-.c35 {
-  fill: #54ccff;
-}
-.c36 {
-  fill: #72daff;
-}
-.c37 {
-  fill: #b6eaff;
-}
-.c38 {
   fill: #ffffff;
 }
-.c39 {
-  fill: #954546;
+.c03 {
+  fill: #fa6597;
 }
-.c40 {
-  fill: #0b87f7;
+.c04 {
+  fill: #e3d307;
 }
-.c41 {
-  fill: #ff2626;
+.c05 {
+  fill: #b0ab06;
 }
-.c42 {
-  fill: #180f02;
+.c06 {
+  fill: #218011;
 }
-.c43 {
-  fill: #2b2319;
+.c07 {
+  fill: #e83535;
 }
-.c44 {
-  fill: #fbdd4b;
+.c08 {
+  fill: #137de9;
 }
-.c45 {
-  fill: #f5b923;
+.c09 {
+  fill: #58cfff;
 }
-.c46 {
-  fill: #cc8a18;
+.c10 {
+  fill: #5eff58;
 }
-.c47 {
-  fill: #3c2203;
+.c11 {
+  fill: #fff658;
 }
-.c48 {
-  fill: #53320b;
+.c12 {
+  fill: #ff58e0;
 }
-.c49 {
-  fill: #7b501d;
-}
-.c50 {
-  fill: #ffe646;
-}
-.c51 {
-  fill: #ffd627;
-}
-.c52 {
-  fill: #f5b700;
-}
-.c53 {
-  fill: #242424;
-}
-.c54 {
-  fill: #4a4a4a;
-}
-.c55 {
-  fill: #676767;
-}
-.c56 {
-  fill: #f08306;
-}
-.c57 {
-  fill: #fca30e;
-}
-.c58 {
-  fill: #febc0e;
-}
-.c59 {
-  fill: #fbec1c;
-}
-.c60 {
-  fill: #14242f;
-}
-.c61 {
-  fill: #b06837;
-}
-.c62 {
-  fill: #8f4b0e;
-}
-.c63 {
-  fill: #d88227;
-}
-.c64 {
-  fill: #b06837;
+.c13 {
+  fill: #a09d9d;
 }
 </style>`;
 
@@ -213,26 +61,25 @@ const traitsTypes = [
     {
       traitType: "hat",
       pixels:
-        "it00jt00ju00ku00lu00sh00si00sj00sk00sl00sm00sn00so00sp00sq00sr00rs00rt00qu00pu00ou00nu00mu00is00hs00gs00fs00fr00eq00ep00eo00en00em00el00ek00ej00fj00fk00fl00rp00qq00pr00or00nr00mr00lr00kr00jq00jp00ip00ho00hn00gm00fm00fg00fh00fi00gf00gg00he00ie00je00ke00le00me00ne00oe00pe00pf00qf00kt22lt22mt22nt23ot23pt23qt23fo24fp24fq24gp24gq24gr24hq24fn25gn25go25hp25iq25hr25ir26jr26js26ks26ls26ms26rq26ns27os27ps27qs27qr27rr38qg38qh38rh38pg37ph37qi37ri37gh28gi28gj28gk28gl28hm28in28io28hf29hg29hh29hi29hj29hk29hl29pq29oq29nq29mq29lq29kq29op29np29mp29lp29kp29ko29kn29jn29jo29jm29jl29jk29ik29il29im29ij30ii30ih30ig30if30jf30kk30kl30km30ln30lo30kf31lf31mf31jg31jh31ji31jj31kj31lk31ll31lm31mn31nn31no31mo31oo31po31pp31qp31ro32qo32qn32pn32on32om32nm32mm32ml32mk32mj32lj32li32ki32kh32kg32mg32mh32mi32lg32lh32of33nf33pi36pj36qj36qk36ql36rk37rl37rj37rm36rn35og33nh33ni33nj33nk33nl33ng33oh33oi33oj33ok33ol33pk33pl33pm33qm33ss00ht00rg00",
-      pixelCount: 228,
-    },
-    {
-      traitType: "whiskers",
-      pixels:
-        "jq00ir00hr00hs00gs00fs00ft00et00dt00cs00cr00dq00pq00qr00rr00rs00ss00st00tt00ut00vs00vr00uq00iq00qq00",
-      pixelCount: 25,
-    },
-
-    {
-      traitType: "character",
-      pixels:
-        "lw18lv18mu18nu18ou18pt18ql18qm18qn18qo18qp18qq18qr18qs18rk18sj18ti18uh18ug18uf18ue18sd18re18qf18pg18of18if18jf18kf18lf18mf18nf18hg18gf18fe18ed18ce18cf18cg18ch18di18ej18fk18gl18gm18gn18go18gp18gq18gr18gs18gt18gg19gh19gi19gj19gk19ee19ff19qg19qh19qi19qj19qk19rf19se19ht20hs20hr20hq20hp20ho20hn20hm20hl20hk20hj20hi20hh20ih20ig20jg20kg20lg20mg20ng20og20te20tf20tg20th20si20rj20de20df20dg20dh20ei20fj20ef04fg04sf04rg04eg03eh03fh03fi03rh03ri03sg03sh03it21is21ir21iq21ip21io21in21im21il21ik21ij21ii21ji21jh21kh21lh21mh21nh21oh21ph21pi21pj21pk21pl21pm21pn21po21pp21pq21pr21ps21os21ot21nt21mt21lt21kt21jt21ju21jv21jw21kw21kv21ku21ks21kr21kq21kp21ko21kn21km21kl21kk21kj21ki21jj21jk21jl21jm21jn21jo21jp21jq21jr21js21ls21lr21lq21lp21lo21ln21lm21ll21lk21lj21li21mi21mj21mk21ml21mm21mn21mo21mp21mq21mr21ms21ns21nr21nq21np21no21nn21nm21nl21nk21nj21ni21oi21oj21ok21ol21om21on21oo21op21oq21or21lu21iu20iv20iw20hu18hv18hw18dd18td18",
-      pixelCount: 228,
+        "pr05qr04qq04rq04qp04rp05qo04ro05qn04rn05pm04qm04rm05fl00gl00hl00il00jl00kl00ll00ml00nl00ol00pl04ql05rl00fk00gk04hk04ik04jk04kk04lk04mk04nk04ok04pk04qk05rk00gj00hj04ij04jj04kj04lj04mj04nj04oj05pj05qj00hi00ii04ji04ki04li04mi04ni05oi05pi00hh00ih04jh00kh04lh04mh05nh00oh05ph00hg00ig04jg00kg04lg04mg05ng00og05pg00if00kf00lf04mf00of00ke00le04me00kd00ld04md00lc00",
+      pixelCount: 89,
     },
     {
       traitType: "eye",
-      pixels: "kl00pl00jl38ol38jm01km01om01pm01",
-      pixelCount: 8,
+      pixels:
+        "hq00iq00jq00kq00lq00mq00nq00oq00pq00hqgp00hp07ip07jp07kp07lp07mp07np07op07pp00",
+      pixelCount: 9,
+    },
+    {
+      traitType: "mouth",
+      pixels: "",
+      pixelCount: 0,
+    },
+    {
+      traitType: "character",
+      pixels:
+        "kx00lx01mx01nx00kw00lw01mw01nw00hv00iv00jv00kv00lv01mv01nv00ov00pv00gu00hu01iu01ju01ku01lu01mu01nu06ou06pu06qu00ft00gt01ht01it01jt01kt01lt01mt01nt01ot01pt01qt06rt00fs00gs01hs01is01js01ks01ls01ms01ns01os01ps01qs06rs00fr00gr01hr01ir01jr01kr01lr01mr01nr01or01pr01qr01rr06sr00fq00gq01hq01iq01jq01kq01lq01mq01nq01oq01pq01qq01rq01sq06tq00fp00gp01hp01ip01jp01kp01lp01mp01np01op01pp01qp01rp01sp06tp00fo00go01ho01io01jo01ko01lo01mo01no01oo01po01qo01ro01so00fn00gn01hn01in01jn01kn01ln01mn01nn01on01pn01qn06rn00fm00gm01hm01im01jm01km01lm01mm01nm01om01pm01qm06rm00fl00gl00hl00il00jl00kl00ll00ml00nl00ol00pl00ql00rl00",
+      pixelCount: 150,
     },
   ],
 ];
@@ -257,6 +104,15 @@ function decode(rle, pixelCount) {
   return array;
 }
 
+//input [00,00,00]
+function encodeData(input) {
+  let splitted = input.split(",");
+  let x = numberToLetter(parseInt(splitted[0]));
+  let y = numberToLetter(parseFloat(splitted[1]));
+  let color = splitted[2];
+  return x + y + color;
+}
+
 function decodedToSVGString(decode, pixelCount) {
   let svgString = "";
   for (let i = 0; i < pixelCount; i++) {
@@ -271,21 +127,44 @@ function decodedToSVGString(decode, pixelCount) {
 }
 
 const hat = decode(traitsTypes[0][0].pixels, traitsTypes[0][0].pixelCount);
-
 const svgHatString = decodedToSVGString(hat, traitsTypes[0][0].pixelCount);
-const whisker = decode(traitsTypes[0][1].pixels, traitsTypes[0][1].pixelCount);
-const svgWhiskerString = decodedToSVGString(
-  whisker,
-  traitsTypes[0][1].pixelCount
-);
+const eye = decode(traitsTypes[0][1].pixels, traitsTypes[0][1].pixelCount);
+const svgEyeString = decodedToSVGString(eye, traitsTypes[0][1].pixelCount);
+const mouth = decode(traitsTypes[0][2].pixels, traitsTypes[0][2].pixelCount);
+console.log(mouth);
+const svgMouthString = decodedToSVGString(mouth, traitsTypes[0][2].pixelCount);
 const charactor = decode(
-  traitsTypes[0][2].pixels,
-  traitsTypes[0][2].pixelCount
+  traitsTypes[0][3].pixels,
+  traitsTypes[0][3].pixelCount
 );
 const svgCharactorString = decodedToSVGString(
   charactor,
-  traitsTypes[0][2].pixelCount
+  traitsTypes[0][3].pixelCount
 );
-const eye = decode(traitsTypes[0][3].pixels, traitsTypes[0][3].pixelCount);
-const svgEyeString = decodedToSVGString(eye, traitsTypes[0][3].pixelCount);
-frame.innerHTML = svgCharactorString + svgEyeString + svgHatString + color;
+
+frame.innerHTML =
+  svgCharactorString + svgHatString + svgEyeString + svgMouthString + color;
+let dd = encodeData("6,15,00");
+let d1 = encodeData("7,15,07");
+let d2 = encodeData("8,15,07");
+let d3 = encodeData("9,15,07");
+let d4 = encodeData("10,15,07");
+let d5 = encodeData("11,15,07");
+let d6 = encodeData("12,15,07");
+let d7 = encodeData("13,15,07");
+let d8 = encodeData("14,15,07");
+let d9 = encodeData("15,15,00");
+let d10 = encodeData("16,13,00");
+let d11 = encodeData("13,13,00");
+let d12 = encodeData("14,13,00");
+let d13 = encodeData("17,11,00");
+let d14 = encodeData("18,11,00");
+let d15 = encodeData("19,15,00");
+let d16 = encodeData("");
+let d17 = encodeData("");
+console.log(dd + d1 + d2 + d3 + d4 + d5 + d6 + d7 + d8 + d9);
+
+//character 4
+/**
+ *hv00iv00jv00kv00lv03mv03nv00ov00pv00
+ */
